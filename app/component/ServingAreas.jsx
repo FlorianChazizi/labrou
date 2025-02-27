@@ -8,7 +8,7 @@ export default function ServiceAreas() {
   ];
 
   return (
-    <section className="py-16 bg-gray-100">
+    <section className="py-16 bg-gray-100" id="area">
       <div className="container mx-auto px-6 text-center">
         {/* Title */}
         <h2 className="text-4xl font-bold mb-8 text-gray-800">Εξυπηρετούμε</h2>
