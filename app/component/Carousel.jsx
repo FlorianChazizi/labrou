@@ -6,7 +6,7 @@ import Image from "next/image";
 const images = [
   "/images/lamprou_1.jpg",
   "/images/lux-banner-2.jpg",
-  "/images/lamprou_2.jpg",
+  "/images/Lamprou_2.jpg",
 ];
 const leftArrow = "/images/left-arrow.png";
 const rightArrow = "/images/right-arrow.png";
