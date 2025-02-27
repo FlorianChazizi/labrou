@@ -1,0 +1,61 @@
+.navigation-bar{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 50; /* Ensures it stays above all other elements */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    background-color: transparent; /* Initial transparent background */
+    color: #D4A373; /* White text for visibility over the hero section */
+    }
+    .navigation-bar.scrolled {
+      /* background-color: rgb(31,41,55); */
+      background-color: #1B2430;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow */
+      color: white; /* Text color remains white */
+    }
+    .navigation-bar.is-open {
+      /* background-color: rgb(31,41,55); */
+      background-color: #1B2430;
+      color: #A4D037; /* Ensure text remains visible */
+    }
+  .navlinks {
+      position: relative;
+      display: inline-block;
+      font-weight: 700;
+      padding: .5rem;
+      color: #A4D037;
+      text-decoration: none; /* Remove default underline */
+    }
+  
+    
+    /* Create the underline effect */
+    .navlinks::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 2px;
+      background-color: #A4D037; /* Color of the underline */
+      transform: scaleX(0); /* Initially hidden (collapsed) */
+      transform-origin: left; /* Start animation from the left */
+      transition: transform 0.25s ease; /* Smooth transition effect */
+    }
+    
+    /* On hover, show the underline by expanding it */
+    .navlinks:hover::after {
+      transform: scaleX(1); /* Fully expand the underline */
+    }
+  
+    
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .hidden.md\\:flex {
+      display: none; /* Hide large screen links */
+    }
+  
+    .md\\:hidden {
+      display: block; /* Show mobile menu */
+    }
+  }
+  
