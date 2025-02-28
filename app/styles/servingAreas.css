@@ -1,0 +1,10 @@
+.serving{
+    background-image: url("../../public/images/Kitchen\ -Wood.jpg");
+    background-size: cover; 
+    background-position: center;
+    background-attachment: fixed; /* Fixed background for parallax effect */
+    position: relative; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

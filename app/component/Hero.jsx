@@ -4,6 +4,8 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import 'aos/dist/aos.css'; // Import AOS styles
+import AOS from 'aos';
 
 const images = [
   "/images/lux-banner-1.jpg",
@@ -12,6 +14,10 @@ const images = [
 ];
 
 export default function Hero() {
+  useEffect(() => {
+    AOS.init({ duration: 1000 }); // You can set the duration and other settings
+  }, []);
+
   const [index, setIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
 

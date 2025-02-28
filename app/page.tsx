@@ -10,8 +10,8 @@ export default function Home() {
       <Heroo />
       <Services />
       <ServingAreas />
-      <Contact />
       <Carousel />
+      <Contact />
 
     </div>
   );

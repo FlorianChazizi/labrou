@@ -1,7 +1,8 @@
 "use client";
-
+import { useEffect } from "react";
 import Image from "next/image";
-
+import 'aos/dist/aos.css'; // Import AOS styles
+import AOS from 'aos';
 const services = [
   { title: "Kitchen Cabinets", img: "/images/lux-banner-2.jpg" },
   { title: "Bedroom Wardrobes", img: "/images/lux-banner-2.jpg" },
@@ -10,10 +11,14 @@ const services = [
 ];
 
 export default function Services() {
+  useEffect(() => {
+    AOS.init({ duration: 1000 }); // You can set the duration and other settings
+  }, []);
+
     return (
-      <section className="py-16 bg-gray-100" id="services">
+      <section className="py-16 bg-gray-100" id="services" >
         <div className="container mx-auto px-6 text-center">
-          <h2 className="text-4xl font-bold mb-8">Υπηρεσίες</h2>
+          <h2 className="text-4xl font-bold mb-8 font-primary text-neutral-500" data-aos="fade-down">Υπηρεσίες</h2>
   
           {/* Grid Layout */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -21,6 +26,7 @@ export default function Services() {
               <div
                 key={index}
                 className="relative rounded-2xl overflow-hidden shadow-lg group"
+                data-aos="fade-up"
               >
                 {/* Service Image */}
                 <Image

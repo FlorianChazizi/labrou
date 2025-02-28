@@ -47,7 +47,7 @@ const Carousel = () => {
   return (
     <div className="relative w-full max-w-5xl mx-auto pt-12 pb-12" id="erga">
       {/* Header Text */}
-      <h2 className="text-3xl font-semibold text-center mb-6">Οι δουλιές μας</h2>
+      <h2 className="text-3xl font-semibold text-center mb-6 text-neutral-500">Οι δουλιές μας</h2>
 
       {/* Carousel Container */}
       <div

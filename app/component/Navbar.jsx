@@ -3,8 +3,15 @@
 import { useState, useEffect } from 'react';
 import '../styles/navbar.css';
 import Image from "next/image";
+import 'aos/dist/aos.css'; // Import AOS styles
+import AOS from 'aos';
 
 export default function Navbar() {
+
+  useEffect(() => {
+    AOS.init({ duration: 1000 }); // You can set the duration and other settings
+  }, []);
+
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -18,15 +25,15 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`navigation-bar ${isScrolled ? "scrolled" : ""} ${
-        isOpen ? "is-open" : ""
-      }`}
+      className={`navigation-bar ${isScrolled ? "scrolled" : ""} ${isOpen ? "is-open" : ""
+        }`}
     >      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 backdrop-blur-md">
         <div className="flex justify-between h-16">
           <div className="flex-shrink-0 flex items-center">
             <h1>
-              <Image
-                 src="/images/lamprou_logo.jpg"
+              <Image 
+                data-aos="fade-right"
+                src="/images/lamprou_logo.jpg"
                 className="w-15 h-15 rounded-full object-cover"
                 height={55}
                 width={55}
@@ -35,11 +42,11 @@ export default function Navbar() {
               />
             </h1>
           </div>
-          <div className="hidden md:flex space-x-8 items-center">
-            <a href="#erga" className="navlinks">Τα έργα μας</a>
-            <a href="#services" className="navlinks">Υπηρεσίες</a>
-            <a href="#area" className="navlinks">Περιοχές</a>
-            <a href="#contact" className="navlinks">Επικοινωνία</a>
+          <div className="hidden md:flex space-x-8 items-center" data-aos="fade-up">
+            <a href="#erga" className="navlinks font-primary">Τα έργα μας</a>
+            <a href="#services" className="navlinks font-primary">Υπηρεσίες</a>
+            <a href="#area" className="navlinks font-primary">Περιοχές</a>
+            <a href="#contact" className="navlinks font-primary">Επικοινωνία</a>
 
           </div>
           {/* Hamburger Menu */}
@@ -60,10 +67,10 @@ export default function Navbar() {
       {isOpen && (
         <div className="md:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <a href="#erga" className="block navlinks px-3 py-2 rounded-md text-base font-medium text-center"  onClick={() => setIsOpen(false)}>Τα έργα μας</a>
-            <a href="#services" className="block navlinks px-3 py-2 rounded-md text-base font-medium text-center"  onClick={() => setIsOpen(false)}>Υπηρεσίες</a>
-            <a href="#area" className="block navlinks px-3 py-2 rounded-md text-base font-medium text-center"  onClick={() => setIsOpen(false)}>Περιοχές</a>
-            <a href="#contact" className="block navlinks px-3 py-2 rounded-md text-base font-medium text-center"  onClick={() => setIsOpen(false)}>Επικοινωνία</a>
+            <a href="#erga" className="block navlinks px-3 py-2 rounded-md text-base font-medium text-center font-primary" onClick={() => setIsOpen(false)}>Τα έργα μας</a>
+            <a href="#services" className="block navlinks px-3 py-2 rounded-md text-base font-medium text-center font-primary" onClick={() => setIsOpen(false)}>Υπηρεσίες</a>
+            <a href="#area" className="block navlinks px-3 py-2 rounded-md text-base font-medium text-center font-primary" onClick={() => setIsOpen(false)}>Περιοχές</a>
+            <a href="#contact" className="block navlinks px-3 py-2 rounded-md text-base font-medium text-center font-primary" onClick={() => setIsOpen(false)}>Επικοινωνία</a>
           </div>
         </div>
       )}

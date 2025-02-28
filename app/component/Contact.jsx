@@ -6,7 +6,7 @@ export default function Contact() {
     return (
         <section id="contact" className="bg-[#1B2430] text-white py-16 px-6">
             <div className="max-w-7xl mx-auto text-center">
-                <h2 className="text-4xl font-bold text-[#A4D037]">Επικοινωνία</h2>
+                <h2 className="text-4xl font-bold text-[#A4D037] font-accent">Επικοινωνία</h2>
                 <p className="text-lg mt-2 text-gray-300">Είμαστε εδώ για εσάς! Επικοινωνήστε μαζί μας.</p>
 
                 {/* Contact Info */}

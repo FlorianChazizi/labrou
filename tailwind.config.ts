@@ -12,6 +12,11 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        primary: ["Poppins", "sans-serif"],
+        secondary: ["Merriweather", "serif"],
+        accent: ["Playfair Display", "serif"],
+      },
     },
   },
   plugins: [],
